@@ -15,7 +15,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./backend/service1
+    working-directory: backend/service1
 
 jobs:
   build:
@@ -33,7 +33,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'  
+        cache: 'npm'
+        cache-dependency-path: backend/service1/package-lock.json
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
