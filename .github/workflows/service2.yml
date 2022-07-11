@@ -3,11 +3,17 @@
 
 name: Service2 CI
 
-on:
-  [push, pull_request]:
+on: 
+  push:
     paths:
-      - "backend/service2/**"
-      - ".github/workflows/service2.yaml"
+      - "backend/service1/**"
+      - ".github/workflows/service1.yaml"
+    branches: [ "master" ]
+
+  pull_request:
+    paths:
+      - "backend/service1/**"
+      - ".github/workflows/service1.yaml"
     branches: [ "master" ]
 
 defaults:
