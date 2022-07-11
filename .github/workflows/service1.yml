@@ -4,13 +4,7 @@
 name: Service1 CI
 
 on:
-  push:
-    paths:
-      - "backend/service1/**"
-      - ".github/workflows/service1.yaml"
-    branches: [ "master" ]
-    
-  pull_request:
+  [push, pull_request]:
     paths:
       - "backend/service1/**"
       - ".github/workflows/service1.yaml"
