@@ -7,13 +7,13 @@ on:
   push:
     paths:
       - "backend/service1/**"
-      - ".github/workflows/service1.yaml"
+      - ".github/workflows/service2.yaml"
     branches: [ "master" ]
 
   pull_request:
     paths:
       - "backend/service1/**"
-      - ".github/workflows/service1.yaml"
+      - ".github/workflows/service2.yaml"
     branches: [ "master" ]
 
 defaults:
