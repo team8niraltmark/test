@@ -11,6 +11,9 @@ on:
     branches: [ "master" ]
     
   pull_request:
+    paths:
+      - "backend/service1/**"
+      - ".github/workflows/service1.yaml"
     branches: [ "master" ]
 
 defaults:
